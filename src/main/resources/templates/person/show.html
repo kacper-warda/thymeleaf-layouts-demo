@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" layout:decorate="~{layouts/mainLayout}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <title>Szczegóły użytkownika</title>
 </head>
 <body>
-szczegóły użytkownika;
 
-<p>
-    Id: <span th:text="${person.id}"></span>
-</p>
-<p>
-    Username: <span th:text="${person.username}"></span><br/>
-    Email: <span th:text="${person.email}"></span><br/>
-    Enabled: <span th:text="${person.enabled}"></span><br/>
-    Role: <span th:text="${person.role}"></span><br/>
-</p>
+<section layout:fragment="custom-content">
+
+    <h2>szczegóły użytkownika:</h2>
+
+    <p>
+        Id: <span th:text="${person.id}"></span>
+    </p>
+    <p>
+        Username: <span th:text="${person.username}"></span><br/>
+        Email: <span th:text="${person.email}"></span><br/>
+        Enabled: <span th:text="${person.enabled}"></span><br/>
+        Role: <span th:text="${person.role}"></span><br/>
+    </p>
+
+</section>
+
+
 </body>
 </html>
